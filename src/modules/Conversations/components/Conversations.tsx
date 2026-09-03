@@ -1,4 +1,4 @@
-import { redirectToSignIn } from '@clerk/nextjs/server';
+import { auth } from '@clerk/nextjs/server';
 import { redirect } from 'next/navigation';
 
 import { ChatHeader } from '@/common/components/chat/chat-header';
@@ -23,6 +23,7 @@ const Conversations: React.FC<ConversationsProps> = async ({
   const profile = await currentProfile();
 
   if (!profile) {
+    const { redirectToSignIn } = await auth();
     return redirectToSignIn();
   }
 

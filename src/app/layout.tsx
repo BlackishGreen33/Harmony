@@ -23,9 +23,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ClerkProvider>
-      <html lang="zh-tw" suppressHydrationWarning>
-        <body className={cn(font.className, 'bg-[#f9eec6] dark:bg-[#313338]')}>
+    <html lang="zh-tw" suppressHydrationWarning>
+      <body className={cn(font.className, 'bg-[#f9eec6] dark:bg-[#313338]')}>
+        <ClerkProvider>
           <ThemeProvider
             attribute="class"
             defaultTheme="dark"
@@ -37,8 +37,8 @@ export default function RootLayout({
               <QueryProvider>{children}</QueryProvider>
             </SocketProvider>
           </ThemeProvider>
-        </body>
-      </html>
-    </ClerkProvider>
+        </ClerkProvider>
+      </body>
+    </html>
   );
 }
