@@ -61,7 +61,7 @@ export const InviteModal = () => {
           </DialogTitle>
         </DialogHeader>
         <div className="p-6">
-          <Label className="text-xs font-bold uppercase text-zinc-500 dark:text-secondary/70">
+          <Label className="text-xs font-bold text-zinc-500 uppercase dark:text-secondary/70">
             服务器邀请链接
           </Label>
           <div className="mt-2 flex items-center gap-x-2">

@@ -111,7 +111,7 @@ export const EditChannelModal = () => {
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-xs font-bold uppercase text-zinc-500 dark:text-secondary/70">
+                    <FormLabel className="text-xs font-bold text-zinc-500 uppercase dark:text-secondary/70">
                       频道名称
                     </FormLabel>
                     <FormControl>
@@ -138,7 +138,7 @@ export const EditChannelModal = () => {
                       defaultValue={field.value}
                     >
                       <FormControl>
-                        <SelectTrigger className="border-0 bg-zinc-300/50 capitalize text-black outline-none ring-offset-0 focus:ring-0 focus:ring-offset-0">
+                        <SelectTrigger className="border-0 bg-zinc-300/50 text-black capitalize ring-offset-0 outline-hidden focus:ring-0 focus:ring-offset-0">
                           <SelectValue placeholder="选择一个频道类型" />
                         </SelectTrigger>
                       </FormControl>
