@@ -5,6 +5,9 @@
   "description": "Harmony - 在线即时通讯平台",
   "author": "BlackishGreen33 <s5460703@gmail.com>",
   "license": "MIT",
+  "engines": {
+    "node": ">=20.19"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CCNUPracticalTraining-530-2/Harmony.git"
@@ -83,7 +86,7 @@
     "postcss": "^8.5.26",
     "prettier": "^3.9.6",
     "prettier-plugin-organize-imports": "^4.1.0",
-    "prettier-plugin-tailwindcss": "^0.6.14",
+    "prettier-plugin-tailwindcss": "^0.8.1",
     "prisma": "^6.0.1",
     "tailwindcss": "^4.3.3",
     "typescript": "^5"
