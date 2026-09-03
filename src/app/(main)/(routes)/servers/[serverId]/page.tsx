@@ -1,17 +1,17 @@
-import { NextPage } from 'next';
-
 import Servers from '@/modules/Servers';
 
 interface ServerIdPageProps {
-  params: {
+  params: Promise<{
     serverId: string;
-  };
+  }>;
 }
 
-const Page: NextPage<ServerIdPageProps> = ({ params }) => {
+const Page = async ({ params }: ServerIdPageProps) => {
+  const { serverId } = await params;
+
   return (
     <>
-      <Servers serverId={params.serverId} />
+      <Servers serverId={serverId} />
     </>
   );
 };
