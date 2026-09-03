@@ -1,17 +1,17 @@
-import { NextPage } from 'next';
-
 import Invite from '@/modules/Invite';
 
 interface InviteCodePageProps {
-  params: {
+  params: Promise<{
     inviteCode: string;
-  };
+  }>;
 }
 
-const Page: NextPage<InviteCodePageProps> = ({ params }) => {
+const Page = async ({ params }: InviteCodePageProps) => {
+  const { inviteCode } = await params;
+
   return (
     <>
-      <Invite inviteCode={params.inviteCode} />
+      <Invite inviteCode={inviteCode} />
     </>
   );
 };

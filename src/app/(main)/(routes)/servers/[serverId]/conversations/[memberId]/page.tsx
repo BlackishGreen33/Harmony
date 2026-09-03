@@ -1,24 +1,27 @@
-import { NextPage } from 'next';
-
 import Conversations from '@/modules/Conversations';
 
 interface MemberIdPageProps {
-  params: {
+  params: Promise<{
     memberId: string;
     serverId: string;
-  };
-  searchParams: {
-    video?: boolean;
-  };
+  }>;
+  searchParams: Promise<{
+    video?: string | string[];
+  }>;
 }
 
-const Page: NextPage<MemberIdPageProps> = ({ params, searchParams }) => {
+const Page = async ({ params, searchParams }: MemberIdPageProps) => {
+  const [{ memberId, serverId }, { video }] = await Promise.all([
+    params,
+    searchParams,
+  ]);
+
   return (
     <>
       <Conversations
-        memberId={params.memberId}
-        serverId={params.serverId}
-        video={searchParams.video}
+        memberId={memberId}
+        serverId={serverId}
+        video={video === 'true'}
       />
     </>
   );

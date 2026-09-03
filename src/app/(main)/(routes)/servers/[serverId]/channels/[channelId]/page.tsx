@@ -1,18 +1,18 @@
-import { NextPage } from 'next';
-
 import Channels from '@/modules/Channels';
 
 interface ChannelIdPageProps {
-  params: {
+  params: Promise<{
     serverId: string;
     channelId: string;
-  };
+  }>;
 }
 
-const Page: NextPage<ChannelIdPageProps> = ({ params }) => {
+const Page = async ({ params }: ChannelIdPageProps) => {
+  const { serverId, channelId } = await params;
+
   return (
     <>
-      <Channels serverId={params.serverId} channelId={params.channelId} />
+      <Channels serverId={serverId} channelId={channelId} />
     </>
   );
 };
