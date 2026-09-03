@@ -1,4 +1,4 @@
-import { redirectToSignIn } from '@clerk/nextjs/server';
+import { auth } from '@clerk/nextjs/server';
 import { redirect } from 'next/navigation';
 
 import { ServerSidebar } from '@/common/components/server/server-sidebar';
@@ -16,6 +16,7 @@ const ServerIdLayout = async ({
   const profile = await currentProfile();
 
   if (!profile) {
+    const { redirectToSignIn } = await auth();
     return redirectToSignIn();
   }
 

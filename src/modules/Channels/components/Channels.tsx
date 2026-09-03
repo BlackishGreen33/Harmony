@@ -1,4 +1,4 @@
-import { redirectToSignIn } from '@clerk/nextjs/server';
+import { auth } from '@clerk/nextjs/server';
 import { ChannelType } from '@prisma/client';
 import { redirect } from 'next/navigation';
 
@@ -18,6 +18,7 @@ const Channels: React.FC<ChannelProps> = async ({ serverId, channelId }) => {
   const profile = await currentProfile();
 
   if (!profile) {
+    const { redirectToSignIn } = await auth();
     return redirectToSignIn();
   }
 

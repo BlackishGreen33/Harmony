@@ -1,4 +1,4 @@
-import { redirectToSignIn } from '@clerk/nextjs/server';
+import { auth } from '@clerk/nextjs/server';
 import { redirect } from 'next/navigation';
 
 import { currentProfile } from '@/common/libs/current-profile';
@@ -12,6 +12,7 @@ const Servers: React.FC<ServerProps> = async ({ serverId }) => {
   const profile = await currentProfile();
 
   if (!profile) {
+    const { redirectToSignIn } = await auth();
     return redirectToSignIn();
   }
 
