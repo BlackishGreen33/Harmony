@@ -8,7 +8,7 @@ import { SocketProvider } from '@/common/components/providers/socket-provider';
 import { ThemeProvider } from '@/common/components/providers/theme-provider';
 import { cn } from '@/common/utils/utils';
 
-import '@/common/styles/globals.scss';
+import '@/common/styles/globals.css';
 
 const font = Open_Sans({ subsets: ['latin'] });
 

@@ -109,7 +109,7 @@ export const InitialModal = () => {
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-xs font-bold uppercase text-zinc-500 dark:text-secondary/70">
+                    <FormLabel className="text-xs font-bold text-zinc-500 uppercase dark:text-secondary/70">
                       服务器名称
                     </FormLabel>
                     <FormControl>

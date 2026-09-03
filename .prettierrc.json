@@ -4,6 +4,7 @@
     "prettier-plugin-tailwindcss"
   ],
   "tailwindFunctions": ["classNames"],
+  "tailwindStylesheet": "./src/common/styles/globals.css",
   "singleQuote": true,
   "trailingComma": "es5",
   "tabWidth": 2,

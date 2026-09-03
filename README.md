@@ -52,7 +52,7 @@
 
 ### 🎯 相容环境
 
-- 现代浏览器（Chrome >= 64, Edge >= 79, Firefox >= 78, Safari >= 12）
+- 现代浏览器（Chrome >= 111, Edge >= 111, Firefox >= 128, Safari >= 16.4）
 
 ### 💻 本地调试
 

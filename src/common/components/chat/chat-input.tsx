@@ -71,7 +71,7 @@ export const ChatInput = ({ apiUrl, query, name, type }: ChatInputProps) => {
                   <button
                     type="button"
                     onClick={() => onOpen('messageFile', { apiUrl, query })}
-                    className="absolute left-8 top-7 flex h-[24px] w-[24px] items-center justify-center rounded-full bg-zinc-500 p-1 transition hover:bg-zinc-600 dark:bg-zinc-400 dark:hover:bg-zinc-300"
+                    className="absolute top-7 left-8 flex h-[24px] w-[24px] items-center justify-center rounded-full bg-zinc-500 p-1 transition hover:bg-zinc-600 dark:bg-zinc-400 dark:hover:bg-zinc-300"
                   >
                     <Plus className="text-white dark:text-[#313338]" />
                   </button>
@@ -83,7 +83,7 @@ export const ChatInput = ({ apiUrl, query, name, type }: ChatInputProps) => {
                     }`}
                     {...field}
                   />
-                  <div className="absolute right-8 top-7">
+                  <div className="absolute top-7 right-8">
                     <EmojiPicker
                       onChange={(emoji: string) =>
                         field.onChange(`${field.value} ${emoji}`)
